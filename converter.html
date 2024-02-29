@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Length Converter</title>
+        <link href="./converter.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Length Converter</h1>
+
+            
+            <form class="form" action="" method="">
+                <p>"Please type the value you want to convert between different length measurements."</p>
+                <div class="containers">
+                <label for="cm" class="container-label">Cetimeters:</label>
+                <input type="text" class="form-control" name="cm" id="cm" />
+                <br/>
+
+                <label for="inches" class="container-label" id="container-inches">Inches:</label>
+                <input type="text" class="form-control" name="inches" id="inches" />
+                <br/>
+
+                <label for="feet" class="container-label">Feet:</label>
+                <input type="text" class="form-control" name="feet" id="feet" />
+                <br/>
+
+                <label for="meters" class="container-label">Meters:</label>
+                <input type="text" class="form-control" name="meters" id="meters" />
+                <br/>
+
+                <label for="miles" class="container-label">Miles:</label>
+                <input type="text" class="form-control" name="miles" id="miles" />
+                <br/>
+
+                <label for="kilometers" class="container-label">Kilometers:</label>
+                <input type="text" class="form-control" name="kilometers" id="kilometers" />
+                <br/>
+
+                <label for="Yards" class="container-label">Yards:</label>
+                <input type="text" class="form-control" name="yards" id="yards" />
+                <br/>
+
+                <input type="button" class="form-control-center" name="converter" id="converter" value="Converter"/>
+                <input type="submit" class="form-control-center" name="clear" id="clear" value="Clear All" />
+               </div>
+            </form>
+
+
+        </div>
+
+
+        <script type="text/javascript">
+
+            
+
+            var input = document.getElementById('converter');
+
+            input.addEventListener('click',function(e){
+
+                e.preventDefault();
+
+                var centi_1 = parseFloat(document.getElementById('cm').value);
+                var inches_1 = parseFloat(document.getElementById('inches').value);
+                var feet_1 = parseFloat(document.getElementById('feet').value);
+                var meters_1 = parseFloat(document.getElementById('meters').value);
+                var miles_1 = parseFloat(document.getElementById('miles').value);
+                var kilometers_1 = parseFloat(document.getElementById('kilometers').value);
+                var yards_1 = parseFloat(document.getElementById('yards').value);
+            
+
+                // alert(centi);
+
+                    var centie = document.getElementById('cm');
+                    var inches = document.getElementById('inches');
+                    var feet = document.getElementById('feet');
+                    var meters = document.getElementById('meters');
+                    var miles = document.getElementById('miles');
+                    var kilometers =  document.getElementById('kilometers');
+                    var yards = document.getElementById('yards');
+
+
+
+                if(centi_1){
+                    // alert(centi);
+                    
+                    var conversion = centi_1* 0.393701;
+                    var conversion_1 = centi_1 *0.0328084;
+                    var conversion_2 = centi_1* 0.01;
+                    var conversion_3 = centi_1 *0.0000062137;
+                    var conversion_4 = centi_1 *  0.00001;
+                    var conversion_5 = centi_1 * 0.0109361;
+                    
+                    inches.value = conversion;
+                    feet.value = conversion_1;
+                    meters.value = conversion_2;
+                    miles.value = conversion_3;
+                    kilometers.value = conversion_4;
+                    yards.value = conversion_5;
+
+
+                }else if(inches_1){
+
+                    var conversions = inches_1* 2.54;
+                    var conversions_1 = inches_1 * 0.0833333;
+                    var conversions_2 = inches_1 * 0.0254;
+                    var conversions_3 = inches_1 *0.0000157828  ;
+                    var conversions_4 = inches_1 *  0.0000254;
+                    var conversions_5 = inches_1 * 0.0277778;
+
+                    centie.value = conversions;
+                    feet.value = conversions_1;
+                    meters.value = conversions_2;
+                    miles.value = conversions_3;
+                    kilometers.value = conversions_4;
+                    yards.value = conversions_5;
+
+                }else if(feet_1){
+
+                    var conversionss = feet_1 *30.48 ;
+                    var conversionss_1 = feet_1 * 12;
+                    var conversionss_2 = feet_1 * 0.3048;
+                    var conversionss_3 = feet_1 * 0.000189394;
+                    var conversionss_4 = feet_1 * 0.0003048;
+                    var conversionss_5 = feet_1 * 0.333333;
+
+                    centie.value = conversionss;
+                    inches.value = conversionss_1;
+                    meters.value = conversionss_2;
+                    miles.value = conversionss_3;
+                    kilometers.value = conversionss_4;
+                    yards.value = conversionss_5;
+
+                }else if(meters_1){
+
+                    var conversions0 = meters_1 * 100 ;
+                    var conversions1 = meters_1 * 39.3701;
+                    var conversions2 = meters_1 * 3.28084;
+                    var conversions3 = meters_1 * 0.000621371;
+                    var conversions4 = meters_1 * 0.001;
+                    var conversions5 = meters_1 * 1.09361;
+
+                    centie.value = conversions0;
+                    inches.value = conversions1;
+                    feet.value = conversions2;
+                    miles.value = conversions3;
+                    kilometers.value =conversions4;
+                    yards.value = conversions5;
+
+                }else if(miles_1){
+
+                    var conversions00 = miles_1 *160934 ;
+                    var conversions11 = miles_1 * 63360;
+                    var conversions22 = miles_1 * 5280;
+                    var conversions33 = miles_1 * 1609.34;
+                    var conversions44 = miles_1 * 1.60934;
+                    var conversions55 = miles_1 * 1760;
+
+                    centie.value = conversions00;
+                    inches.value = conversions11;
+                    feet.value = conversions22;
+                    meters.value = conversions33;
+                    kilometers.value =conversions44;
+                    yards.value = conversions55;
+
+                }else if(kilometers_1){
+
+                    var conversions000 = kilometers_1 *100000 ;
+                    var conversions111 = kilometers_1 * 39370.1;
+                    var conversions222 = kilometers_1 * 3280.84;
+                    var conversions333 = kilometers_1 * 1000;
+                    var conversions444 = kilometers_1 * 0.621371;
+                    var conversions555 = kilometers_1 * 1093.61;
+
+                    centie.value = conversions000;
+                    inches.value = conversions111;
+                    feet.value = conversions222;
+                    meters.value = conversions333;
+                    miles.value =conversions444;
+                    yards.value = conversions555;
+
+                }else{
+
+
+                    var conversions_000 = yards_1 *91.44 ;
+                    var conversions_111 = yards_1 * 36;
+                    var conversions_222 = yards_1 * 3;
+                    var conversions_333 = yards_1 * 3;
+                    var conversions_444 = yards_1 *0.000568182;
+                    var conversions_555 = yards_1 * 0.0009144;
+
+                    centie.value = conversions_000;
+                    inches.value = conversions_111;
+                    feet.value = conversions_222;
+                    meters.value = conversions_333;
+                    miles.value =conversions_444;
+                    kilometers.value = conversions_555;
+                }
+                
+
+            })
+
+
+        </script>
+    </body>
+</html>
+
+
+
